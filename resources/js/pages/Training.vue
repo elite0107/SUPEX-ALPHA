@@ -74,7 +74,7 @@
                                 >{{currentAnswer.answer}}</span>
                                 <div class="flex flex-row px-4 pb-4" v-if="isFinished">
                                     <span
-                                        class="block w-4 rounded-lg mx-4 bg-gray-400"
+                                        class="block w-2 rounded-lg mx-4 bg-gray-400"
                                     ></span>
                                     <span class="italitc">{{questions[current].answers[0].answer}}</span>
                                 </div>
