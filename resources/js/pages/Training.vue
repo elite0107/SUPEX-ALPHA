@@ -86,7 +86,8 @@
                                 @btnClicked="onValider"
                                 :disabled="isFinished"
                             >
-                                Valider
+                                <span v-if="!isFinished">Valider</span>
+                                <span v-if="isFinished">Next</span>
                             </SubmitButton>
                         </div>
                     </div>
