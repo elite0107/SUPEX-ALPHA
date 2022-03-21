@@ -84,7 +84,6 @@
                             <SubmitButton
                                 class="col-start-1 col-span-4 md:col-start-2 md:col-span-2"
                                 @btnClicked="onValider"
-                                :disabled="isFinished"
                             >
                                 <span v-if="!isFinished">Valider</span>
                                 <span v-if="isFinished">Next</span>
