@@ -4,7 +4,7 @@
             class="content mx-4 py-4 my-auto col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-3 md:col-span-8"
         >
             <div class="grid grid-cols-4 gap-4">
-                <div class="col-start-1 col-span-3" v-if="!isLoading && questions[current].mode === 'select'">
+                <div class="col-start-1 col-span-3 responsive-height" v-if="!isLoading && questions[current].mode === 'select'">
                     <div class="question flex flex-col">
                         <p class="title mb-4">Item {{current + 1}} - {{category_name}}, <span class="sub_category">{{subcategory_name}}</span></p>
                         <div class="flex justify-between">
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-start-1 col-span-3" v-else-if="!isLoading && questions[current].mode === 'open'">
+                <div class="col-start-1 col-span-3 responsive-height" v-else-if="!isLoading && questions[current].mode === 'open'">
                     <div class="question flex flex-col">
                         <div class="answer mb-3">
                             <p class="title mb-4">Item {{current + 1}} - {{category_name}}, <span class="sub_category">{{subcategory_name}}</span></p>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-start-1 col-span-3" v-else>
+                <div class="col-start-1 col-span-3 responsive-height" v-else>
                     <div class="question flex flex-col">
                         <span class="title mb-4">
                             <Skeletor width="100%" height="1.2rem" class="rounded"></Skeletor>
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-start-4 col-span-1">
+                <div class="col-start-4 col-span-1 responsive-height">
                     <div class="list flex flex-col h-full">
                         <div class="header">
                             <p>Série personnalisée</p>
@@ -448,5 +448,9 @@ export default {
         padding: 0.1rem 0.5rem;
         border-left: 4px solid #999;
         font-style: italic;
+    }
+
+    .responsive-height {
+        height: calc(100vh - 2rem);
     }
 </style>
